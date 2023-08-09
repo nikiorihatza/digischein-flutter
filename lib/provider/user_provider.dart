@@ -7,7 +7,7 @@ import '../model/user.dart';
 // import 'user_model.dart';
 
 class UserProvider with ChangeNotifier {
-  User _user = User(id: 5, firstname: 'Vinzent', lastname: 'Dorner', email: 'v.dorner@gmail.com', profilePictureUrl: ''); // The User object to hold user data
+  User _user = User(id: 5, firstname: 'Vinzent', lastname: 'Dorner', email: 'v.dorner@gmail.com', profilePictureUrl: 'https://i.ibb.co/2YR9CSd/H.png'); // The User object to hold user data
 
   // Getter to access the current user
   User get user => _user;

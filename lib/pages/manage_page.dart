@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../provider/reports_provider.dart';
 
-class ManagePage extends StatelessWidget {
+class ManagePage extends StatefulWidget {
   const ManagePage({super.key});
 
+  @override
+  State<ManagePage> createState() => _ManagePageState();
+}
+
+class _ManagePageState extends State<ManagePage> {
   @override
   Widget build(BuildContext context) {
     final reportsProvider = Provider.of<ReportsProvider>(context);

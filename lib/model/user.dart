@@ -43,6 +43,6 @@ class User {
   }
 
   User? clear() {
-    return strnull;
+    return null;
   }
 }

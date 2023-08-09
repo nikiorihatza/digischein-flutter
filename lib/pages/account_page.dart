@@ -1,4 +1,3 @@
-// screens/account_screen.dart
 import 'package:digischein_flutter/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -29,10 +28,10 @@ class _AccountPageState extends State<AccountPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: NetworkImage(user.profilePictureUrl ?? ''),
-              ),
+              /**CircleAvatar(
+                  radius: 50,
+                  backgroundImage: NetworkImage(user.profilePictureUrl),
+                  ),**/
               const SizedBox(height: 16),
               Text(
                 user.firstname ?? 'Guest User',
@@ -48,7 +47,12 @@ class _AccountPageState extends State<AccountPage> {
                 onPressed: () {
                   // Sign out the user by clearing the user data in the UserProvider
                   userProvider.clearUserData();
-                  Login();
+
+                  // Navigate back to the login page
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
                 },
                 child: const Text('Sign Out'),
               ),
